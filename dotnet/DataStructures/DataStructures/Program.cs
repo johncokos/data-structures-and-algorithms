@@ -7,8 +7,9 @@ namespace DataStructures
   {
     static void Main(string[] args)
     {
-      // LinkedListFun();
-      //StackFun();
+      LinkedListFun();
+      StackFun();
+      QueueFun();
       HashMapFun();
     }
 
@@ -23,6 +24,7 @@ namespace DataStructures
       myNumbers.Insert(7);
       myNumbers.Insert(8);
 
+      Console.WriteLine("LINKED LIST (numbers)");
       myNumbers.Print();
       myNumbers.PrintR(myNumbers.Head);
 
@@ -31,6 +33,7 @@ namespace DataStructures
       myFamily.Insert("Cathy");
       myFamily.Insert("Zach");
       myFamily.Insert("Allie");
+      Console.WriteLine("LINKED LIST (family)");
       myFamily.Print();
     }
 
@@ -42,10 +45,28 @@ namespace DataStructures
       myFamily.Push("Zach");
       myFamily.Push("Allie");
 
+      Console.WriteLine("STACK");
       while (myFamily.Peek())
       {
         Node<string> person = myFamily.Pop();
-        Console.WriteLine(person.Value);
+        Console.WriteLine($"POP: {person.Value}");
+      }
+
+    }
+
+    static void QueueFun()
+    {
+      Queue<string> myFamily = new Queue<string>();
+      myFamily.Enqueue("John");
+      myFamily.Enqueue("Cathy");
+      myFamily.Enqueue("Zach");
+      myFamily.Enqueue("Allie");
+
+      Console.WriteLine("QUEUE");
+      while (myFamily.Peek())
+      {
+        Node<string> person = myFamily.Dequeue();
+        Console.WriteLine($"DQ: {person.Value}");
       }
 
     }

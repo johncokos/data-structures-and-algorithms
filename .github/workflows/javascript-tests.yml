@@ -1,4 +1,4 @@
-name: Node CI
+name: Run Javascript Tests
 
 on: [push]
 
@@ -19,6 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
+        cd javascript
         npm i
         npm test
       env:
