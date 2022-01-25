@@ -5,7 +5,6 @@ const quicksort = require('../quick-sort');
 
 describe.only('testing quicksort', () => {
   it('quicksort(list, isGreater) should sort from largest to smallest', ()=> {
-console.log('yo');
     let nums = [4,9,2,3,1,10];
 
     let isGreater = (a, b) => a > b;
