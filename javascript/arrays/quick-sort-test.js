@@ -3,6 +3,8 @@
 const expect = require('expect');
 const quicksort = require('../quick-sort');
 
+console.log('testing the tester');
+
 describe.only('testing quicksort', () => {
   it('quicksort(list, isGreater) should sort from largest to smallest', ()=> {
     let nums = [4,9,2,3,1,10];
