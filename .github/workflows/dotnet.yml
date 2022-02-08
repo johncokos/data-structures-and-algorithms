@@ -2,11 +2,11 @@ name: .NET
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
     - 'c-sharp/**'
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
     paths:
     - 'c-sharp/**'
 
