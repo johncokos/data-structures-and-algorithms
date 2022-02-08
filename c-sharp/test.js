@@ -1,1 +1,1 @@
-console.log('this should not run the tests');
+console.log('this should only run the .net tests');
